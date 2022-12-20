@@ -102,3 +102,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+p2_continuous-control/Reacher_Linux/Reacher_Data/
+
+p2_continuous-control/Reacher_Linux/
