@@ -9,6 +9,25 @@
 
 This repository contains material related to Udacity's [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) program.  
 
+## Project 3 Submission Notes
+
+Files included in the project:
+
+- `p3_collab-compet/readme.md` installation / running instructions
+- `p3_collab-compet/report.md` the report write-up
+- `p3_collab-compet/Tennis.ipynb` Primary notebook for training the deep learning agent
+- `p3_collab-compet/Tennis.html` Exported notebook output to HTML
+- `p3_collab-compet/snapshots/*.pth` actor & critic weights from a successful run
+
+Code files supporting the Jupyter Notebook:
+
+- `p3_collab-compet/Agent.py` the main AI code responsible for orchestrating training with the actor / critic
+- `p3_collab-compet/MultiAgentDDPG.py` the DDPG code for the multi-agent scenario
+- `p3_collab-compet/Actor.py` contains the actor code in the Actor / Critic relationship
+- `p3_collab-compet/Critic.py` contains the critic code in the Actor / Critic relationship
+- `p3_collab-compet/ReplayBuffer.py` stores past information to present to the training process to boost learning performance
+- `p3_collab-compet/OUNoise.py` the Ornstein-Uhlenbeck noise generator.
+
 ## Project 2 Submission Notes
 
 I based the code largely off of the ddg_agent code presented in provided examples from the Nanodegree, but tweaked with hyperparameters and separated things out into their own files
