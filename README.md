@@ -9,6 +9,27 @@
 
 This repository contains material related to Udacity's [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) program.  
 
+## Project 2 Submission Notes
+
+I based the code largely off of the ddg_agent code presented in provided examples from the Nanodegree, but tweaked with hyperparameters and separated things out into their own files
+
+Files included in the project:
+
+- `report.md` the report write-up
+- `p2_continuous-control/readme.md` installation / running instructions
+- `p2_continuous-control/Continuous_Control.ipynb` Primary notebook for training the deep learning agent
+- `p2_continuous-control/Continuous_Control.html` Exported notebook output to HTML
+- `p2_continuous-control/snapshots/actor.pth` actor weights from a successful run
+- `p2_continuous-control/snapshots/critic.pth` critic weights from a successful run
+
+Code files supporting the Jupyter Notebook:
+
+- `p2_continuous-control/Agent.py` the main AI code responsible for orchestrating training with the actor / critic
+- `p2_continuous-control/Actor.py` contains the actor code in the Actor / Critic relationship
+- `p2_continuous-control/Critic.py` contains the critic code in the Actor / Critic relationship
+- `p2_continuous-control/ReplayBuffer.py` stores past information to present to the training process to boost learning performance
+- `p2_continuous-control/OUNoise.py` the Ornstein-Uhlenbeck noise generator. This is used to add random noise to the actor's choices so it can discover new rewards
+ 
 ## Table of Contents
 
 ### Tutorials
