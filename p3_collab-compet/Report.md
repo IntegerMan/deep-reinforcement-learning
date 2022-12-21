@@ -14,20 +14,28 @@ The actors and critics have 2 hidden layers with 256 nodes in each layer. These 
 The agent itself used the following hyperparameters:
 
 ```py
-BUFFER_SIZE = int(1e6)  # replay buffer size
+BUFFER_SIZE = int(1e5)  # replay buffer size
 BATCH_SIZE = 128        # minibatch size
 GAMMA = 0.99            # discount factor
 TAU = 1e-3              # for soft update of target parameters
 LR_ACTOR = 1e-4         # learning rate of the actor 
 LR_CRITIC = 1e-4        # learning rate of the critic
 WEIGHT_DECAY = 0        # L2 weight decay
-FC1_unit = 256          # Number of neurons in the first hidden layer
-FC2_unit = 256          # Number of neurons in the second hidden layer
+FC1_unit = 64           # Number of neurons in the first hidden layer
+FC2_unit = 128          # Number of neurons in the second hidden layer
+```
+
+The OUNoise used the following parameters which wound up being significant for converging on a solution. Too much sigma caused it to wander too off of partial progress and get stuck in training:
+
+```py
+mu = 0
+theta = 0.15
+sigma = 0.1
 ```
 
 ## Performance
 
-Training was rough and seemed to come very gradually, then in sudden spikes near the end as it converged on its episode target of a score of 0.5 over 100 episodes. Ultimately, it reached this target on episode X.
+Training was rough and seemed to come very gradually, then in sudden spikes near the end as it converged on its episode target of a score of 0.5 over 100 episodes. Ultimately, it reached this target on episode 1550.
 
 ![Rewards Plot](Plot.png)
 
