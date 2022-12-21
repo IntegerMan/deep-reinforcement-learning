@@ -9,7 +9,7 @@ This uses multi-agent DDPG with agent / critic learning and a replay buffer to p
 
 It uses an OUNoise generator to help converge on optimal scenarios sooner.
 
-The actors and critics have 2 hidden layers with 256 nodes in each layer. These use batch normalization and relu activation for both layers.
+The actors and critics have 2 hidden layers with 256 nodes in each layer. These use batch normalization and relu activation for both layers. Backpropagation is used to help train the networks.
 
 The agent itself used the following hyperparameters:
 
@@ -19,8 +19,10 @@ BATCH_SIZE = 128        # minibatch size
 GAMMA = 0.99            # discount factor
 TAU = 1e-3              # for soft update of target parameters
 LR_ACTOR = 1e-4         # learning rate of the actor 
-LR_CRITIC = 3e-4        # learning rate of the critic
-WEIGHT_DECAY = 0.0001   # L2 weight decay
+LR_CRITIC = 1e-4        # learning rate of the critic
+WEIGHT_DECAY = 0        # L2 weight decay
+FC1_unit = 256          # Number of neurons in the first hidden layer
+FC2_unit = 256          # Number of neurons in the second hidden layer
 ```
 
 ## Performance

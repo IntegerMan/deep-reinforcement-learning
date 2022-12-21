@@ -10,15 +10,15 @@ import torch
 import torch.nn.functional as F
 import torch.optim as optim
 
-BUFFER_SIZE = int(1e6)  # replay buffer size
+BUFFER_SIZE = int(1e5)  # replay buffer size
 BATCH_SIZE = 128        # minibatch size
 GAMMA = 0.99            # discount factor
 TAU = 1e-3              # for soft update of target parameters
 LR_ACTOR = 1e-4         # learning rate of the actor 
 LR_CRITIC = 1e-4        # learning rate of the critic
 WEIGHT_DECAY = 0        # L2 weight decay
-FC1_unit = 256          # Number of neurons in the first hidden layer
-FC2_unit = 256          # Number of neurons in the second hidden layer
+FC1_unit = 64           # Number of neurons in the first hidden layer
+FC2_unit = 128          # Number of neurons in the second hidden layer
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
@@ -57,7 +57,6 @@ class Agent():
             p1.data.copy_(p0.data)
    
     def act(self, state, add_noise=True):
-        """Returns actions for given state as per current policy."""
         state = torch.from_numpy(state).float().to(device)
         self.actor_local.eval()
 

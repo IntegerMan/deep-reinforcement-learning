@@ -25,7 +25,6 @@ class Critic(nn.Module):
         self.fc3.weight.data.uniform_(-3e-3, 3e-3)
 
     def forward(self, state, action):
-        """Build a critic (value) network that maps (state, action) pairs -> Q-values."""
         if state.dim() == 1: state = torch.unsqueeze(state, 0)
         xs = F.relu(self.fcs1(state))
         xs = self.bn1(xs)
