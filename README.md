@@ -15,8 +15,8 @@ I based the code largely off of the ddg_agent code presented in provided example
 
 Files included in the project:
 
-- `report.md` the report write-up
 - `p2_continuous-control/readme.md` installation / running instructions
+- `p2_continuous-control/report.md` the report write-up
 - `p2_continuous-control/Continuous_Control.ipynb` Primary notebook for training the deep learning agent
 - `p2_continuous-control/Continuous_Control.html` Exported notebook output to HTML
 - `p2_continuous-control/snapshots/actor.pth` actor weights from a successful run
